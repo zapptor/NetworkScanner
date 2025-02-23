@@ -63,3 +63,19 @@ firewall. will fallback to layer 3 if external ip is detected
    pip show python-nmap
 
    nmap --version 
+
+
+--------------AUTOMATED INSTALLATION --------------
+
+---------------------FOR LINUX---------------------
+1. Download the install_dependenciesLinux.sh
+   
+2. Go to the the scripts directory
+   
+3. make it executable by running this command
+   
+   chmod +x install_dependenciesLinux.sh
+
+4. run the script
+   
+   ./install_dependenciesLinux.sh
