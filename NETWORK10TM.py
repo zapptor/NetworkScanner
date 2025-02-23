@@ -495,10 +495,12 @@ def submenu_scan_tcp_ips(scan_function, scan_protocol, menu_name: str,):
         print(f"\t{menu_name}")
         print("=" * 31)
         print("=" * 31)
-        networks, version_nr = prompt_network_input(v_detection=True)
-        if networks is None:
+        result = prompt_network_input(v_detection=True)
+        if result is None:
             return
-        
+
+        networks, version_nr = result
+
         #Build mapping: ip -> network from all provided networks.
         ip_network_pairs = []
         for network in networks:
@@ -584,9 +586,11 @@ def menu_active_host_scanner():
         print("=" * 31)
         print("\tScan for Active Hosts")
         print("=" * 31)
-        networks = prompt_network_input()
-        if networks is None:
+        result = prompt_network_input()
+        if result is None:
             break
+        
+        networks, _ = result
 
         network = networks[0]
 
