@@ -78,4 +78,4 @@ firewall. will fallback to layer 3 if external ip is detected
 
 4. run the script
    
-   ./install_dependenciesLinux.sh
+   sudo ./install_dependenciesLinux.sh
