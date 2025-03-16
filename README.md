@@ -47,14 +47,24 @@ Download and install the following programs:
 Then, open CMD and install the remaining dependencies with:
 ```
 python get-pip.py
+```
+```
 pip install python-nmap
+```
+```
 pip install scapy
 ```
 To confirm installation, run:
 ```
 python --version
+```
+```
 pip show scapy
+```
+```
 pip show python-nmap
+```
+```
 nmap --version
 ```
 
@@ -74,6 +84,8 @@ nmap --version
 1. Open a terminal and run:
      ```
      sudo apt update
+     ```
+     ```
      sudo apt install python3 python3-pip nmap
      ```
 2. Then, install the required Python packages:
@@ -84,9 +96,12 @@ nmap --version
      ```
      python3 --version
      ```
+     ```
      pip3 show scapy
      ```
+     ```
      pip3 show python-nmap
+     ```
      ```
      nmap --version
      ```
