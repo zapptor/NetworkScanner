@@ -39,34 +39,34 @@ Installation Instructions
      ```
 
 ### Manuall Installation Windows
-Download and install the following programs:
+1. Download and install the following programs:
 - [Python](https://www.python.org/downloads/)
 - [nmap](https://nmap.org/download.html)
 - [npcap](https://npcap.com/#download)
 
-Then, open CMD and install the remaining dependencies with:
-```
-python get-pip.py
-```
-```
-pip install python-nmap
-```
-```
-pip install scapy
-```
-To confirm installation, run:
-```
-python --version
-```
-```
-pip show scapy
-```
-```
-pip show python-nmap
-```
-```
-nmap --version
-```
+2. Then, open CMD and install the remaining dependencies with:
+    ```
+    python get-pip.py
+    ```
+    ```
+    pip install python-nmap
+    ```
+    ```
+    pip install scapy
+    ```
+3. To confirm installation, run:
+    ```
+    python --version
+    ```
+    ```
+    pip show scapy
+    ```
+    ```
+    pip show python-nmap
+    ```
+    ```
+    nmap --version
+    ```
 
 ### Automated Installation Linux
 1. Download the `install_dependenciesLinux.sh` script.
