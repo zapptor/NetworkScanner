@@ -83,8 +83,11 @@ nmap --version
 3. To confirm installation, run:
      ```
      python3 --version
+     ```
      pip3 show scapy
+     ```
      pip3 show python-nmap
+     ```
      nmap --version
      ```
 
