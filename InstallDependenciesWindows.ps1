@@ -39,6 +39,7 @@ if ([string]::IsNullOrEmpty($pythonNmapInfo)) {
     Write-Output "python-nmap is already installed."
 }
 
+<#
 # 5. Check for Npcap:
 Write-Output "Checking for Npcap..."
 if (-not (Test-Path "C:\Windows\System32\wpcap.dll")) {
@@ -47,6 +48,17 @@ if (-not (Test-Path "C:\Windows\System32\wpcap.dll")) {
     Start-Sleep -Seconds 10
 } else {
     Write-Output "Npcap is already installed."
+}
+#>
+
+# 5. Check for WinPcap:
+Write-Output "Checking for WinPcap..."
+if (-not (Test-Path "C:\Windows\System32\wpcap.dll")) {
+    Write-Output "WinPcap not found. Installing WinPcap via winget..."
+    winget install --id WinPcap.WinPcap -e
+    Start-Sleep -Seconds 10
+} else {
+    Write-Output "WinPcap is already installed."
 }
 
 # 6. Check for Nmap:
