@@ -87,7 +87,7 @@ def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
 
 
-def signal_handler():
+def signal_handler(sig, frame):
     global SCAN_CANCELLED
     SCAN_CANCELLED = True
     print("\nInterrupted by user. Cancelling scan...\n")
@@ -312,17 +312,23 @@ def parse_ports_input(ports_input: str) -> list[int]:
         return TCP_PORTS
 
 
-def parse_config_entry(entry: str) -> tuple[str, str]:
+def parse_config_entry(key_value: str) -> tuple[str, str]:
     """
     Parse a configuration entry in the format "key=value".
     Return a tuple containing the key and value if valid, otherwise raise an error
     """
     global TCP_PORTS
 
-    key_value = entry.split("=")
+    key_value = key_value.split("=")
     if len(key_value) == 2:
         key, value = key_value[0].strip().lower(), key_value[1].strip().lower()
-        if value.isdigit() and key in TCP_SCAN_CONFIG:
+        if key == "stealth":
+            try:
+                float(value)
+                return "stealth_delay", value
+            except ValueError:
+                raise ValueError("Invalid value for stealth; must be numeric (float or int).")
+        elif value.isdigit() and key in TCP_SCAN_CONFIG:
             return key, value
         elif value in ["true", "false", "20", "100", "200" ,"1000"]:
             return key, value
@@ -842,10 +848,10 @@ def menu_configurations_tcp_scan():
         print("=" * 31)
         print("      TCP Configurations")
         print("=" * 31)
-        print("Format: key=value (e.g. timeout=2)")
-        print(f" •Port scan 'Timeout' = {TCP_SCAN_CONFIG['timeout']}")
+        print("Format: key=value (e.g. timeout = 2)")
+        print(f" •Port scan 'Timeout' = {TCP_SCAN_CONFIG['timeout']}s")
         print(f" •Port scan 'Retries' = {TCP_SCAN_CONFIG['retries']}")
-        print(f" •Port scan 'Stealth' delay = {TCP_SCAN_CONFIG['stealth_delay']}")
+        print(f" •Port scan 'Stealth' = {TCP_SCAN_CONFIG['stealth_delay']}s")
         print(f" •Port scan 'Threads' = {TCP_SCAN_CONFIG['threads']}")
         print(f" •Port scan 'Verbose' = {TCP_SCAN_CONFIG['verbose']}")
         print(f"\nPort options = 20, 100, 200, 1000")
@@ -862,17 +868,21 @@ def menu_configurations_tcp_scan():
             continue
         try:
             key, value = parse_config_entry(user_input)
-            if key in TCP_SCAN_CONFIG or key == "ports":
-                if key == "timeout":
+            if key in TCP_SCAN_CONFIG or key in ["ports"]:
+                if key in  ["timeout", "retries", "threads"]:
+
+                    if int(value) > 100000:
+                        raise ValueError("Value must be less then 100 000.")
                     TCP_SCAN_CONFIG[key] = int(value)
-                elif key == "retries":
-                    TCP_SCAN_CONFIG[key] = int(value)
-                elif key == "stealth":
+
+                elif key == "stealth_delay":
+                    if float(value) > 100000:
+                        raise ValueError("Value must be less then 100 000.")
                     TCP_SCAN_CONFIG[key] = float(value)
-                elif key == "threads":
-                    TCP_SCAN_CONFIG[key] = int(value)
+
                 elif key == "verbose":
                     TCP_SCAN_CONFIG[key] = value
+
                 elif key == "ports":
                     if value == "20":
                         TCP_PORTS = TCP_20_PORTS
