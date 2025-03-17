@@ -22,20 +22,24 @@ Features
 Installation Instructions
 -------------------------
 ### Automated Installation Windows
-1. Download the `InstallDependenciesWindows.ps1` script.
-2. Save the script in your downloads folder.
+1. Download the `NetworkScanner-main.zip`.
+2. Extract the zip to you downloads folder.
 3. Open PowerShell as Administrator.
-4. Navigate to the scripts directory:
+4. Navigate to the Networkscanners directory:
      ```
-     cd "$env:USERPROFILE\Downloads"
+     cd "$env:USERPROFILE\Downloads\NetworkScanner-main"
      ```
-5. Run the script:
+5. Run the installation script:
      ```
      .\InstallDependenciesWindows.ps1
      ```
 6. If you encounter an error, run:
      ```
      powershell -ExecutionPolicy Bypass -File .\InstallDependenciesWindows.ps1
+     ```
+7. Now the networkscanner is ready. How to run it:
+     ```
+     python NETWORK10TM.py
      ```
 
 ### Manuall Installation Windows
