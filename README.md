@@ -22,31 +22,32 @@ Features
 Installation Instructions
 -------------------------
 ### Automated Installation Windows
-1. Download the `NetworkScanner-main.zip`.
-2. Extract the zip to you downloads folder.
-3. Open PowerShell as Administrator.
-4. Navigate to the Networkscanners directory:
+
+1. Open PowerShell as Administrator.
+2. Navigate to you downloads folder.
      ```
-     cd "$env:USERPROFILE\Downloads\NetworkScanner-main"
+     cd "$env:USERPROFILE\Downloads"
      ```
-5. Run the installation script:
+3. Download the installation script
      ```
-     .\InstallDependenciesWindows.ps1
+     wget -O InstallDependenciesWindows.ps1 https://raw.githubusercontent.com/zapptor/NetworkScanner/main/InstallDependenciesWindows.ps1
      ```
-6. If you encounter an error, run:
+4. Run the installation script:
      ```
      powershell -ExecutionPolicy Bypass -File .\InstallDependenciesWindows.ps1
      ```
-7. Now the networkscanner is ready. How to run it:
+5. Download the scanner:
      ```
-     python NETWORK10TM.py
+     wget -O NETWORK10TM.py https://raw.githubusercontent.com/zapptor/NetworkScanner/main/NETWORK10TM.py
      ```
-
+6. How to run the scanner:
+    - [Usage](https://github.com/zapptor/NetworkScanner/tree/main?tab=readme-ov-file#usage)
+   
 ### Manuall Installation Windows
 1. Download and install the following programs:
 - [Python](https://www.python.org/downloads/)
 - [nmap](https://nmap.org/download.html)
-- [npcap](https://npcap.com/#download)
+- [winpcap](https://www.winpcap.org/install/)
 
 2. Then, open CMD and install the remaining dependencies with:
     ```
@@ -71,7 +72,9 @@ Installation Instructions
     ```
     nmap --version
     ```
-
+4. How to run the scanner:
+    - [Usage](https://github.com/zapptor/NetworkScanner/tree/main?tab=readme-ov-file#usage)
+      
 ### Automated Installation Linux
 1. Download the `install_dependenciesLinux.sh` script.
 2. Open a terminal and navigate to the scripts directory.
@@ -83,7 +86,9 @@ Installation Instructions
      ```
      sudo ./install_dependenciesLinux.sh
      ```
-
+5. How to run the scanner:
+    - [Usage](https://github.com/zapptor/NetworkScanner/tree/main?tab=readme-ov-file#usage)
+      
 ### Manuall Installation Linux
 1. Open a terminal and run:
      ```
@@ -109,13 +114,16 @@ Installation Instructions
      ```
      nmap --version
      ```
-
+5. How to run the scanner:
+    - [Usage](https://github.com/zapptor/NetworkScanner/tree/main?tab=readme-ov-file#usage)
 
 Usage
 -----
-Run the tool by executing the main script from your console:
-  Windows:
+Run the tool by executing the main script from your terminal/powershell:
+
+  Windows(run Powershell as admin):
   `python NETWORK10TM.py`
+  
   Linux:
   `sudo python NETWORK10TM.py`
 
