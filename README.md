@@ -122,11 +122,13 @@ Usage
 Run the tool by executing the main script from your terminal/powershell:
 
   Windows(run Powershell as admin):
-  `python NETWORK10TM.py`
-  
+  ```
+  python NETWORK10TM.py
+  ```
   Linux:
-  `sudo python NETWORK10TM.py`
-
+  ```
+  sudo python NETWORK10TM.py
+  ```
 The main menu will be displayed with options:
 
 - **1. Scan for Active Hosts**  
