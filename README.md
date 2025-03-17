@@ -72,21 +72,41 @@ Installation Instructions
     ```
     nmap --version
     ```
-4. How to run the scanner:
+4. Open PowerShell as Administrator.
+5. Navigate to you downloads folder.
+     ```
+     cd "$env:USERPROFILE\Downloads"
+     ```
+6. Download the scanner:
+     ```
+     wget -O NETWORK10TM.py https://raw.githubusercontent.com/zapptor/NetworkScanner/main/NETWORK10TM.py
+     ```
+7. How to run the scanner:
     - [Usage](https://github.com/zapptor/NetworkScanner/tree/main?tab=readme-ov-file#usage)
+
       
 ### Automated Installation Linux
-1. Download the `install_dependenciesLinux.sh` script.
-2. Open a terminal and navigate to the scripts directory.
-3. Make the script executable:
+1. Open you terminal and navigate to your Downloads folder.
+     ```
+     cd ~/Downloads
+     ```
+2. Download the installation script
+     ```
+     curl -o install_dependenciesLinux.sh https://raw.githubusercontent.com/zapptor/NetworkScanner/main/install_dependenciesLinux.sh
+     ```
+4. Make the script executable:
      ```
      chmod +x install_dependenciesLinux.sh
      ```
-4. Run the script:
+5. Run the script:
      ```
      sudo ./install_dependenciesLinux.sh
      ```
-5. How to run the scanner:
+6. Download the scanner:
+     ```
+     curl -o NETWORK10TM.py https://raw.githubusercontent.com/zapptor/NetworkScanner/main/NETWORK10TM.py
+     ```   
+6. How to run the scanner:
     - [Usage](https://github.com/zapptor/NetworkScanner/tree/main?tab=readme-ov-file#usage)
       
 ### Manuall Installation Linux
@@ -114,12 +134,17 @@ Installation Instructions
      ```
      nmap --version
      ```
-5. How to run the scanner:
+4. Download the scanner:
+     ```
+     curl -o NETWORK10TM.py https://raw.githubusercontent.com/zapptor/NetworkScanner/main/NETWORK10TM.py
+     ```   
+6. How to run the scanner:
     - [Usage](https://github.com/zapptor/NetworkScanner/tree/main?tab=readme-ov-file#usage)
 
 Usage
 -----
 Run the tool by executing the main script from your terminal/powershell:
+Navigate to the scanner directory and run the python file
 
   Windows(run Powershell as admin):
   ```
