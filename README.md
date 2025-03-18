@@ -47,7 +47,7 @@ Installation Instructions
 1. Download and install the following programs:
 - [Python](https://www.python.org/downloads/)
 - [nmap](https://nmap.org/download.html)
-- [winpcap](https://www.winpcap.org/install/)
+- [npcap]([https://www.winpcap.org/install/](https://npcap.com/#download))
 
 2. Then, open CMD and install the remaining dependencies with:
     ```
