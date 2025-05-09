@@ -28,27 +28,21 @@ Installation Instructions
      ```
      cd "$env:USERPROFILE\Downloads"
      ```
-3. Download the installation script
-     ```
-     wget -O InstallDependenciesWindows.ps1 https://raw.githubusercontent.com/zapptor/NetworkScanner/main/InstallDependenciesWindows.ps1
-     ```
-4. Run the installation script:
-     ```
-     .\InstallDependenciesWindows.ps1
-     ```
-5. When the installation is done, CLOSE POWERSHELL.
-
-6. Open powershell.
-   
-7. Navigate to you downloads folder.
-     ```
-     cd "$env:USERPROFILE\Downloads"
-     ```
-8. Download the scanner:
+3. Download the scanner:
      ```
      wget -O NETWORK10TM.py https://raw.githubusercontent.com/zapptor/NetworkScanner/main/NETWORK10TM.py
      ```
-9. How to run the scanner:
+4. Download the installation script
+     ```
+     wget -O InstallDependenciesWindows.ps1 https://raw.githubusercontent.com/zapptor/NetworkScanner/main/InstallDependenciesWindows.ps1
+     ```
+5. Run the installation script:
+     ```
+     .\InstallDependenciesWindows.ps1
+     ```
+6. When the installation is done, CLOSE POWERSHELL.
+
+7. How to run the scanner:
     - [Usage](https://github.com/zapptor/NetworkScanner/tree/main?tab=readme-ov-file#usage)
    
 ### Manuall Installation Windows
