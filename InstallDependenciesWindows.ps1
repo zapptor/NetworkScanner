@@ -1,4 +1,10 @@
 # InstallDependencies.ps1
+# Force this process to use Bypass execution policy
+try {
+    Set-ExecutionPolicy Bypass -Scope Process -Force -ErrorAction Stop
+} catch {
+    Write-Warning "Could not override execution policy: $_"
+}
 
 param(
     [switch]$Elevated
