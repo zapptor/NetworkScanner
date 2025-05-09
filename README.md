@@ -38,7 +38,7 @@ Installation Instructions
      ```
 5. Run the installation script:
      ```
-     .\InstallDependenciesWindows.ps1
+     powershell.exe -ExecutionPolicy Bypass -File .\InstallDependenciesWindows.ps1
      ```
 6. When the installation is done, CLOSE POWERSHELL.
 
