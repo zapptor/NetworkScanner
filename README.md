@@ -36,7 +36,7 @@ Installation Instructions
      ```
      .\InstallDependenciesWindows.ps1
      ```
-5. When the installation is done, CLOSE ALL POWERSHELL WINDOWS.
+5. When the installation is done, CLOSE POWERSHELL.
 
 6. Open powershell.
    
