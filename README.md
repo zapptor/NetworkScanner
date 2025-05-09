@@ -23,7 +23,7 @@ Installation Instructions
 -------------------------
 ### Automated Installation Windows
 
-1. Open PowerShell as Administrator.
+1. Open PowerShell.
 2. Navigate to you downloads folder.
      ```
      cd "$env:USERPROFILE\Downloads"
@@ -38,7 +38,7 @@ Installation Instructions
      ```
 5. When the installation is done, CLOSE ALL POWERSHELL WINDOWS.
 
-6. Open powershell again as a Administrator
+6. Open powershell.
    
 7. Navigate to you downloads folder.
      ```
