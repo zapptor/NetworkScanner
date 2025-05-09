@@ -146,9 +146,10 @@ Installation Instructions
 Usage
 -----
 Run the tool by executing the main script from your terminal/powershell:
+
 Navigate to the scanner directory and run the python file
 
-  Windows(run Powershell as admin):
+  Windows (RUN POWERSHELL AS ADMIN):
   ```
   python NETWORK10TM.py
   ```
