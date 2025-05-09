@@ -186,12 +186,7 @@ if ((Get-Command python -ErrorAction SilentlyContinue) -and
     (& $pythonPath -m pip show python-nmap 2>$null) -and 
     (winget list --id Npcap.Npcap -e 2>$null) -and 
     (Get-Command nmap -ErrorAction SilentlyContinue)) {
-    Write-Output "All dependencies are installed successfully. Youâ€™re ready to go!"
+    Write-Output "All dependencies are installed successfully. You're ready to go!"
 } else {
     Write-Output "Some dependencies failed to install. Please check the output above for details."
-    exit 1
 }
-
-# Close PowerShell window automatically on successful completion
-exit
-Stop-Process -Id $PID
