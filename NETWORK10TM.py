@@ -44,7 +44,7 @@ DEFAULT_TCP_SCAN_CONFIG = {
 
 
 TCP_SCAN_CONFIG = {
-    'timeout': 2,
+    'timeout': 1,
     'retries': 0,
     'threads': 100,
     'stealth_delay': 0.1,
