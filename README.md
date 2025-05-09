@@ -37,12 +37,14 @@ Installation Instructions
      powershell -ExecutionPolicy Bypass -File .\InstallDependenciesWindows.ps1
      ```
 5. When the installation is done, CLOSE ALL POWERSHELL WINDOWS.
-  
-6. Navigate to you downloads folder again.
+
+6. Open powershell again as a Administrator
+   
+7. Navigate to you downloads folder.
      ```
      cd "$env:USERPROFILE\Downloads"
      ```
-7. Download the scanner:
+8. Download the scanner:
      ```
      wget -O NETWORK10TM.py https://raw.githubusercontent.com/zapptor/NetworkScanner/main/NETWORK10TM.py
      ```
