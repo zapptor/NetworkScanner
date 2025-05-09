@@ -149,6 +149,7 @@ Run the tool by executing the main script from your terminal/powershell:
 
 Navigate to the scanner directory and run the python file
 
+
   Windows (RUN POWERSHELL AS ADMIN):
   ```
   python NETWORK10TM.py
